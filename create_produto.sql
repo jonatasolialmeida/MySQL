@@ -1,7 +1,8 @@
-create table produto(
-id_Codigo_Produto integer primary key auto_increment,
-nome varchar(30) not null,
-categoria varchar(10) not null,
-id_Codigo integer,
-constraint fk_prod_Fornecedor foreign key (id_Codigo) references fornecedores (idCodigo)
+CREATE TABLE produto (
+    id_Codigo_Produto INTEGER PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(30) NOT NULL,
+    categoria VARCHAR(10) NOT NULL,
+    id_Codigo INTEGER,
+    CONSTRAINT fk_prod_Fornecedor FOREIGN KEY (id_Codigo)
+        REFERENCES fornecedores (idCodigo)
 );
